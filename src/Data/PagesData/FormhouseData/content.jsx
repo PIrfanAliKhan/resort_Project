@@ -1,0 +1,3 @@
+export const logo ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRIKup-idrwMgffzOxl9-Retcbskaabuq_NXOhWrXUfwPCD24bNZCLKWt4T8KeGJvq0Wo&usqp=CAU"
+export const Herovideo= "https://www.shutterstock.com/shutterstock/videos/1093128187/preview/stock-footage-drone-flight-towards-residential-house-and-shed-tilt-down-to-show-solar-panels.webm"
+export const heroimg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKuXtp2SVvUbKEODx5DifGzyooR5jLhROCJAGX2lYkKDgguG4vEVAGBo6pWsdG9Joxduo&usqp=CAU"

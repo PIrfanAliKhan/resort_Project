@@ -1,0 +1,3 @@
+export const logo ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXioaVjk-I_q7Pp-eEut0RS-XMBIJYGraqtTawnKUkaCsQRbG3VB3rVHhzA4H4pX1Oc7Q&usqp=CAU"
+export const Herovideo= "https://cdn.pixabay.com/video/2023/10/28/186843-879056520_large.mp4"
+export const heroimg = "https://images.unsplash.com/photo-1618083707368-b3823daa2726?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YWR2ZW50dXJlJTIwdHJhdmVsfGVufDB8fDB8fHww"

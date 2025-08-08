@@ -1,0 +1,3 @@
+export const logo ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt0HAn_4-AEW3-rZchefDRv2i7YNXNuqpqDxYOTQunuQK0KyfHJYeUf5m1NUqg7dAHrEU&usqp=CAU"
+export const Herovideo= "https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/NL0L5N5Rgimkt8edi/place-for-relaxation-massage-table_hzsgbmcoe__a5afcb8ab2dbbfd3ba2af94149148558__P360.mp4"
+export const heroimg = "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/166/2023/08/15095922/Massage-Relaxing.jpeg"
