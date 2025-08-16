@@ -109,7 +109,7 @@ const Feedback = () => {
               <div className="rating-container">
                 <p>Select Rating:</p>
                 <div className="stars">
-                  {[...Array(10)].map((_, index) => (
+                  {[...Array(5)].map((_, index) => (
                     <span
                       key={index}
                       className={`star ${formData.rating > index ? "filled" : ""}`}
@@ -118,7 +118,7 @@ const Feedback = () => {
                       ★
                     </span>
                   ))}
-                  <span className="rating-value">{formData.rating}/10</span>
+                  <span className="rating-value">{formData.rating}/5</span>
                 </div>
               </div>
 

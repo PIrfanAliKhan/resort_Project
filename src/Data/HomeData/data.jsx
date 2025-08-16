@@ -10,7 +10,7 @@ export const Home = [
     imageid4:
       "https://www.dellaresorts.com/new-images/new-camp-della-exterior-v4.webp",
 
-      description:"In this challenge, we will learn some basic concepts of C that will get you started with the language. You will need to use the same syntax to read input and write output in many C challenges. As you work through these problems, review the code stubs to learn about reading from stdin and writing to stdout."
+      description:"this is resort"
   },
   {
     id: "2",
@@ -23,7 +23,7 @@ export const Home = [
       "https://media.istockphoto.com/id/1468908187/photo/man-relaxing-on-hiking-trip-in-the-mountains.jpg?s=170667a&w=is&k=20&c=8qfLbxFfFhAATaEIu4_-Xcb2d_ePWNqbeD6R7eTq0DE=",
     imageid4:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgdd188_deftnS96XfIvDPjgoeo5Vdki-qvBZT16yi22WfNIFVHR6430sJOPN0nmkGmyw&usqp=CAU",
-      description:"this is about adventure In this challenge, we will learn some basic concepts of C that will get you started with the language. You will need to use the same syntax to read input and write output in many C challenges. As you work through these problems, review the code stubs to learn about reading from stdin and writing to stdout."
+      description:"this is adventure"
   
     },
   {
@@ -37,7 +37,7 @@ export const Home = [
       "https://www.myrahspa.com/images/ServiceImages/service-64c77cd48f1091690795220.png",
     imageid4:
       "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/166/2023/08/15095922/Massage-Relaxing.jpeg",
-      description:"this is about spa In this challenge, we will learn some basic concepts of C that will get you started with the language. You will need to use the same syntax to read input and write output in many C challenges. As you work through these problems, review the code stubs to learn about reading from stdin and writing to stdout."
+      description:"tthis is spa"
   },
   {
     id: "4",
@@ -50,7 +50,7 @@ export const Home = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRIKup-idrwMgffzOxl9-Retcbskaabuq_NXOhWrXUfwPCD24bNZCLKWt4T8KeGJvq0Wo&usqp=CAU",
     imageid4:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgdd188_deftnS96XfIvDPjgoeo5Vdki-qvBZT16yi22WfNIFVHR6430sJOPN0nmkGmyw&usqp=CAU",
-      description:"this is about form house In this challenge, we will learn some basic concepts of C that will get you started with the language. You will need to use the same syntax to read input and write output in many C challenges. As you work through these problems, review the code stubs to learn about reading from stdin and writing to stdout."
+      description:"this is farm house"
   },
 ];
 

@@ -77,7 +77,7 @@ const Body = () => {
                   </p>
                   <button
                     onClick={() =>
-                      navigate(`/formhouse-details/${formhouse.id}`, {
+                      navigate(`/details/${formhouse.id}`, {
                         state: formhouse,
                       })
                     }

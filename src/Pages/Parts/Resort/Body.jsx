@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./index.css";
 import Filter from "./Filters";
-
 import { Home, Recommended, Popular } from "../../../Data/PagesData/Resortdata/Data";
 
 const Body = () => {
@@ -19,24 +18,30 @@ const Body = () => {
     setFilterCriteria({ price, locations });
   };
 
+  // Filter resorts
   const filteredResorts = Home.filter((item) => {
     const resortLocation = (item.location ?? item.Location)?.toLowerCase() || "";
 
-    // Check location (either from URL or from filter)
-    const locationMatches =
-      selectedLocation
-        ? resortLocation.includes(selectedLocation)
-        : filterCriteria.locations.length === 0 ||
-          filterCriteria.locations.some((loc) =>
-            resortLocation.includes(loc.toLowerCase())
-          );
+    const locationMatches = selectedLocation
+      ? resortLocation.includes(selectedLocation)
+      : filterCriteria.locations.length === 0 ||
+        filterCriteria.locations.some((loc) =>
+          resortLocation.includes(loc.toLowerCase())
+        );
 
-    // Check price
-    const resortPrice = Number(item.price) || 0; // Assuming price is in item.price
+    const resortPrice = Number(item.price) || 0;
     const priceMatches = resortPrice <= filterCriteria.price;
 
     return locationMatches && priceMatches;
   });
+
+  // Group resorts by location
+  const groupedResorts = filteredResorts.reduce((groups, resort) => {
+    const loc = (resort.location ?? resort.Location ?? "Unknown").trim();
+    if (!groups[loc]) groups[loc] = [];
+    groups[loc].push(resort);
+    return groups;
+  }, {});
 
   return (
     <div className="body-container">
@@ -48,8 +53,7 @@ const Body = () => {
           </div>
           <div className="caption-right">
             <p>
-              Discover exceptional destinations. Relax, rejuvenate, and explore
-              with us.
+              Discover exceptional destinations. Relax, rejuvenate, and explore with us.
             </p>
           </div>
         </div>
@@ -63,35 +67,34 @@ const Body = () => {
         </div>
 
         <div className="services-section">
-          {filteredResorts.length > 0 ? (
-            filteredResorts.map((resort, idx) => (
-              <div key={idx} className="service">
-                <div className="service-image">
-                  <img src={resort.imageid1} alt={resort.name} />
-                </div>
-                <div className="service-text">
-                  <h2>{resort.name}</h2>
-                  <p>
-                    <strong>Location:</strong> {resort.location}
-                  </p>
-                  <p>
-                    <strong>About:</strong> {resort.about}
-                  </p>
-                  <button
-                    onClick={() =>
-                      navigate(`/resort-details/${resort.id}`, {
-                        state: resort,
-                      })
-                    }
-                  >
-                    Book Now
-                  </button>
-                </div>
+          {Object.entries(groupedResorts).map(([loc, resorts]) => (
+            <div key={loc} className="location-group">
+              <h2 className="location-heading">{loc}</h2>
+              <div className="location-resorts">
+                {resorts.map((resort, idx) => (
+                  <div key={idx} className="service">
+                    <div className="service-image">
+                      <img src={resort.imageid1} alt={resort.name} />
+                    </div>
+                    <div className="service-text">
+                      <h2>{resort.name}</h2>
+                      <p><strong>Location:</strong> {resort.location}</p>
+                      <p><strong>RoomType:</strong> {resort.roomType}</p>
+                      <button
+                        onClick={() =>
+                          navigate(`/details/${resort.id}`, {
+                            state: { ...resort }, // Pass resort data
+                          })
+                        }
+                      >
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))
-          ) : (
-            <p>No resorts match your filters.</p>
-          )}
+            </div>
+          ))}
         </div>
       </div>
 

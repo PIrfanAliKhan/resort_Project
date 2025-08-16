@@ -6,7 +6,7 @@ import { Carousel } from "react-responsive-carousel";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-// Carousel for each service
+// Service image carousel
 const ServiceCarousel = ({ images }) => (
   <div className="carousel-wrapper">
     <Carousel
@@ -27,15 +27,14 @@ const ServiceCarousel = ({ images }) => (
   </div>
 );
 
-// Horizontal Carousel
+// Horizontal carousel for Recommended
 const HorizontalCarousel = ({ title, items }) => {
   const containerRef = useRef(null);
 
   const scroll = (direction) => {
     const { current } = containerRef;
     if (!current) return;
-
-    const scrollAmount = current.offsetWidth;
+    const scrollAmount = current.offsetWidth - 100; // small gap for better flow
     current.scrollBy({
       left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
@@ -44,39 +43,41 @@ const HorizontalCarousel = ({ title, items }) => {
 
   return (
     <div className="recommendation-block">
-      <h2>{title}</h2>
-      <div className="carousel-controls">
-        <button className="arrow-btn" onClick={() => scroll("left")}>
-          <FaChevronLeft />
-        </button>
+      <div className="recommendation-header">
+        <h2>{title}</h2>
+        <div className="carousel-controls">
+          <button className="arrow-btn" onClick={() => scroll("left")}>
+            <FaChevronLeft />
+          </button>
+          <button className="arrow-btn" onClick={() => scroll("right")}>
+            <FaChevronRight />
+          </button>
+        </div>
+      </div>
 
-        <div className="recommendation-carousel" ref={containerRef}>
-          {items.map((item, idx) => (
-            <div className="recommendation-card" key={idx}>
-              <div className="background-gradient">
-                <img
-                  src={item.image}
-                  className="product-image"
-                  alt={item.description}
-                />
-                <h3 className="product-title">{item.title}</h3>
-                <p className="product-description">{item.description}</p>
-                <div className="buy-button">
-                  Book Now <span className="price-tag">{item.price}</span>
-                </div>
+      <div className="recommendation-carousel" ref={containerRef}>
+        {items.map((item, idx) => (
+          <div className="recommendation-card" key={idx}>
+            <div className="background-gradient">
+              <img
+                src={item.image}
+                className="product-image"
+                alt={item.description}
+              />
+              <h3 className="product-title">{item.title}</h3>
+              <p className="product-description">{item.description}</p>
+              <div className="buy-button">
+                Book Now <span className="price-tag">{item.price}</span>
               </div>
             </div>
-          ))}
-        </div>
-
-        <button className="arrow-btn" onClick={() => scroll("right")}>
-          <FaChevronRight />
-        </button>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
+// 3D Popular carousel
 const Popular3DCarousel = ({ category }) => {
   return (
     <div className="carousel-container">
@@ -102,6 +103,7 @@ const Body = () => {
 
   return (
     <div className="body-container">
+      {/* Services Section */}
       <div className="services" id="services">
         {Home.map((service, index) => {
           const images = [
@@ -110,7 +112,6 @@ const Body = () => {
             service.imageid3,
             service.imageid4,
           ];
-
           const isEven = index % 2 === 0;
 
           return (

@@ -77,7 +77,7 @@ const Body = () => {
                   </p>
                   <button
                     onClick={() =>
-                      navigate(`/adventure-details/${adventure.id}`, {
+                      navigate(`/details/${adventure.id}`, {
                         state: adventure,
                       })
                     }

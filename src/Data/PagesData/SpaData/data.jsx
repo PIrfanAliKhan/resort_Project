@@ -10,6 +10,7 @@ export const Home = [
         Offers: "50% off on booking",
         details: "this is form house 4 1 In this comprehensive tutorial, we dive into the world of Login Page UI design...",
         location: "hydrabad",
+        gst: 3060,
         available: true,
         price: 2500
     },
@@ -25,11 +26,13 @@ export const Home = [
         details: "this is form house 4 1 In this comprehensive tutorial, we dive into the world of Login Page UI design...",
         location: "Andhra Pradesh",
         available: true,
-        price: 3000
+        price: 3000,
+        gst: 3060,
     },
     {
         id: "3",
         name: "spa 3",
+        gst: 3060,
         imageid1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt0HAn_4-AEW3-rZchefDRv2i7YNXNuqpqDxYOTQunuQK0KyfHJYeUf5m1NUqg7dAHrEU&usqp=CAU",
         imageid2: "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/166/2023/06/05075606/AdobeStock_306398316-370x276.jpeg",
         imageid3: "https://www.myrahspa.com/images/ServiceImages/service-64c77cd48f1091690795220.png",
@@ -44,6 +47,7 @@ export const Home = [
     {
         id: "4",
         name: "spa 4",
+        gst: 3060,
         imageid1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKuXtp2SVvUbKEODx5DifGzyooR5jLhROCJAGX2lYkKDgguG4vEVAGBo6pWsdG9Joxduo&usqp=CAU",
         imageid2: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ65B4y_vm65Lc9C0MdXsaEHZl95hTTduhLeP1SKP6BFOxzEiLFhxT-WnEu405FAkorMtc&usqp=CAU",
         imageid3: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRIKup-idrwMgffzOxl9-Retcbskaabuq_NXOhWrXUfwPCD24bNZCLKWt4T8KeGJvq0Wo&usqp=CAU",
@@ -66,6 +70,7 @@ export const Home = [
         Offers: "30% off on weekend packages",
         details: "spa 5 features premium facilities, expert therapists, and tranquil ambiance for ultimate rejuvenation.",
         location: "Mumbai",
+        gst: 3060,
         available: true,
         price: 3500
     },
@@ -81,6 +86,7 @@ export const Home = [
         details: "spa 6 offers therapeutic treatments blending ancient healing techniques with modern wellness.",
         location: "Goa",
         available: true,
+        gst: 3060,
         price: 4000
     },
     {
@@ -95,6 +101,7 @@ export const Home = [
         details: "spa 7 provides exclusive group packages tailored for professional teams and relaxation.",
         location: "Pune",
         Availability: false,
+        gst: 3060,
         price: 3100
     },
     {
@@ -109,7 +116,8 @@ export const Home = [
         details: "spa 8 combines ocean views with luxurious treatments for mind and body rejuvenation.",
         location: "Kerala",
         available: true,
-        price: 3700
+        price: 3700,
+        gst: 3060,
     },
     {
         id: "9",
@@ -123,6 +131,7 @@ export const Home = [
         details: "spa 9 offers tailored therapy sessions after personal wellness consultations.",
         location: "Bangalore",
         available: true,
+        gst: 3060,
         price: 2900
     },
     {
@@ -137,6 +146,7 @@ export const Home = [
         details: "spa 10 is designed for couples seeking privacy and indulgence with premium amenities.",
         location: "Jaipur",
         available: false,
+        gst: 3060,
         price: 4500
     }
 ];

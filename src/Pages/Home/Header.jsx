@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Body from "./Body";
 import Feedback from "./Feedback";
+import { useNavigate } from "react-router-dom";
 import {
   heroimg,
   logo,
@@ -13,6 +14,11 @@ import {
 import "./index.css";
 
 function Header() {
+  const navigate = useNavigate();
+
+  const goToLocation = (category) => {
+    navigate("/location", { state: { category } });
+  };
   return (
     <div className="header-wrapper">
       {/* Hero Image */}
@@ -29,7 +35,9 @@ function Header() {
         </div>
 
         <div className="nav-links">
+          <Link to="/signin">
           <button type="button">SignIn/SignUp</button>
+          </Link>
         </div>
       </div>
 
@@ -37,29 +45,21 @@ function Header() {
       <div className="detail">
         <div className="headings">
           <ul>
-            <li>
+            <li onClick={() => goToLocation("resort")}>
               <img src={resortimg} alt="Resort" />
-              <Link to="/resort">
-                <button>Resort</button>
-              </Link>
+              <button>Resort</button>
             </li>
-            <li>
+            <li onClick={() => goToLocation("adventure")}>
               <img src={adventureimg} alt="Adventure" />
-              <Link to="/adventure">
-                <button>Adventure</button>
-              </Link>
+              <button>Adventure</button>
             </li>
-            <li>
+            <li onClick={() => goToLocation("spa")}>
               <img src={spaimg} alt="Spa" />
-              <Link to="/spa">
-                <button>Spa</button>
-              </Link>
+              <button>Spa</button>
             </li>
-            <li>
+            <li onClick={() => goToLocation("farmhouse")}>
               <img src={formhouseimg} alt="Farm House" />
-              <Link to="/farmhouse">
-                <button>Farm House</button>
-              </Link>
+              <button>Farm House</button>
             </li>
           </ul>
         </div>
@@ -73,6 +73,8 @@ function Header() {
           <h3>Let’s start your journey</h3>
         </div>
       </div>
+
+      
 
       {/* Main Content */}
       <Body />
